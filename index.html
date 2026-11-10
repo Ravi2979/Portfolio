@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Chandra P, software engineer working on backend services, distributed systems, and cloud infrastructure."
+    >
+    <title>Home | Chandra P</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <aside class="sidebar">
+        <a class="brand" href="#home">
+            <span class="brand-mark" aria-hidden="true">CP</span>
+            <span>Chandra P</span>
+        </a>
+
+        <nav class="navigation" aria-label="Portfolio navigation">
+            <a href="#home" aria-current="page">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Professional Experience</a>
+            <a href="#impact">Key Achievements</a>
+            <a href="#capstone">Capstone Projects</a>
+            <a href="#credentials">Achievements &amp; Certificates</a>
+            <a href="#contact">Contact Info</a>
+        </nav>
+    </aside>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+        <!-- Home contains the summary, portrait, and résumé download. -->
+        <section id="home" class="page home" data-page aria-labelledby="home-title">
+            <div class="home-copy">
+                <p class="eyebrow">Software Engineer</p>
+                <h1 id="home-title" tabindex="-1">Chandra P</h1>
+
+                <p class="home-summary">
+                    I’m a software engineer with 5+ years of experience building
+                    backend services, distributed systems, and full-stack features.
+                    I develop Go and Java microservices, build data pipelines with
+                    Python, and connect backend services to React and TypeScript
+                    interfaces. My work on Vantiva’s VIA platform focuses on Linux
+                    edge agents, telemetry pipelines, and monitoring for AI
+                    inference workloads.
+                </p>
+
+                <a
+                    class="button"
+                    href="assets/Chandra_P_Resume.pdf"
+                    download="Chandra_P_Resume.pdf"
+                >
+                    Download résumé
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+
+            <div class="portrait">
+                <img
+                    id="profile-photo"
+                    src="assets/profile.jpg"
+                    alt="Portrait of Chandra P"
+                    width="700"
+                    height="850"
+                >
+                <div id="photo-placeholder" class="photo-placeholder" hidden>
+                    <span aria-hidden="true">CP</span>
+                    <p>Profile photo</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page" data-page aria-labelledby="about-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">Background</p>
+                    <h1 id="about-title" tabindex="-1">About Me</h1>
+                    <p class="page-intro">
+                        I work on the services behind applications and the data
+                        and infrastructure those services depend on.
+                    </p>
+                </header>
+
+                <div class="reading-column">
+                    <article class="text-block">
+                        <h2>How I build applications</h2>
+                        <p>
+                            Backend engineering is my main area of work. I build
+                            services in Go and Java, define how those services
+                            communicate, and connect them to databases and event
+                            pipelines. For a web application, that might mean
+                            designing a REST API that a React interface can call.
+                            Between backend services, I’ve used gRPC to define
+                            the information each service sends and receives.
+                        </p>
+                        <p>
+                            I’ve also worked on the frontend. At Digit Healthcare,
+                            I helped integrate a React interface with services
+                            used in clinical workflows. At Verzeo, I contributed
+                            React and TypeScript features alongside transaction
+                            processing and data ingestion work. Working on both
+                            sides helps me see how API response times, data formats,
+                            and error messages affect the people using an application.
+                        </p>
+                    </article>
+
+                    <article class="text-block">
+                        <h2>What I do on cloud and edge systems</h2>
+                        <p>
+                            At L&amp;T Technology Services, I work with Vantiva on
+                            VIA, a platform that runs AI workloads across cloud
+                            and edge infrastructure. I develop Linux agent
+                            components that collect CPU, memory, disk, and network
+                            metrics directly from the host. The agents send
+                            structured metrics and batches of logs to cloud
+                            services, where Kafka helps process that operational data.
+                        </p>
+                        <p>
+                            I’ve also implemented node health and capacity
+                            information used in model scheduling. When an AI model
+                            first loads, the additional startup time can affect how
+                            quickly a request completes. I added telemetry and
+                            monitoring so teams could see that delay and investigate it.
+                        </p>
+                    </article>
+
+                    <article class="text-block">
+                        <h2>How I investigate performance issues</h2>
+                        <p>
+                            At Samsung, QA flagged a screen that took too long
+                            to load. I compared application and database timings
+                            and found that the service issued a database query
+                            for every record. I batched the reads, reviewed which
+                            indexes supported the query, and validated the change
+                            through automated tests and QA retesting.
+                        </p>
+                        <p>
+                            At Digit Healthcare, I investigated a claims API that
+                            slowed down under peak traffic. After connection pool
+                            tuning gave temporary relief, I optimized a query
+                            that scanned excess data, removed repeated calls, and
+                            moved work that could run in the background to Kafka.
+                            Load tests and production monitoring helped verify
+                            how the system behaved under peak traffic.
+                        </p>
+                    </article>
+
+                    <article class="text-block">
+                        <h2>My background in data science</h2>
+                        <p>
+                            I earned a Master of Science in Data Science from the
+                            University of North Texas. My capstone covered the
+                            full process of collecting and transforming streaming
+                            data, using it to train forecasting models, and
+                            communicating the results through interactive dashboards.
+                            The project gave me experience taking data from
+                            ingestion through analysis and presentation.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page" data-page aria-labelledby="skills-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">Technical toolkit</p>
+                    <h1 id="skills-title" tabindex="-1">Skills</h1>
+                    <p class="page-intro">
+                        The languages, platforms, and practices I use to build,
+                        test, and operate software.
+                    </p>
+                </header>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h2>Backend &amp; APIs</h2>
+                        <p>
+                            Build services, define API contracts, and connect
+                            applications through synchronous and asynchronous workflows.
+                        </p>
+                        <ul class="tags">
+                            <li>Go</li><li>Java</li><li>Spring Boot</li>
+                            <li>Node.js</li><li>REST</li><li>gRPC</li>
+                            <li>GraphQL</li><li>SOAP</li><li>OpenAPI</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h2>Frontend Development</h2>
+                        <p>
+                            Build responsive interfaces, integrate backend APIs,
+                            and manage data shared across UI components.
+                        </p>
+                        <ul class="tags">
+                            <li>React</li><li>TypeScript</li><li>JavaScript</li>
+                            <li>Redux</li><li>Responsive design</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h2>Cloud &amp; Infrastructure</h2>
+                        <p>
+                            Deploy containerized applications, provision
+                            infrastructure, and automate repeatable Linux setup.
+                        </p>
+                        <ul class="tags">
+                            <li>AWS EKS</li><li>AWS ECS</li><li>AWS Lambda</li>
+                            <li>API Gateway</li><li>Docker</li><li>Kubernetes</li>
+                            <li>Terraform</li><li>Ansible</li><li>Linux</li><li>Nginx</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h2>Databases &amp; Messaging</h2>
+                        <p>
+                            Tune queries and indexes, cache frequently used data,
+                            and use event streams to process work in the background.
+                        </p>
+                        <ul class="tags">
+                            <li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>Redis</li>
+                            <li>MongoDB</li><li>DynamoDB</li><li>Kafka</li><li>RabbitMQ</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h2>Data Engineering &amp; Analytics</h2>
+                        <p>
+                            Ingest and transform data, analyze the results, and
+                            train and evaluate forecasting models.
+                        </p>
+                        <ul class="tags">
+                            <li>Python</li><li>R</li><li>Bash</li><li>Apache Spark</li>
+                            <li>Databricks</li><li>BigQuery</li><li>Pandas</li>
+                            <li>TensorFlow</li><li>scikit-learn</li><li>PyTorch</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h2>Monitoring &amp; Production Support</h2>
+                        <p>
+                            Use logs, metrics, and traces to investigate incidents
+                            and monitor service health, host capacity, and inference behavior.
+                        </p>
+                        <ul class="tags">
+                            <li>Prometheus</li><li>Grafana</li><li>OpenTelemetry</li>
+                            <li>CloudWatch</li><li>GPU telemetry</li><li>Incident response</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h2>Testing, Delivery &amp; Security</h2>
+                        <p>
+                            Verify changes before release, automate deployment
+                            steps, and maintain API access controls.
+                        </p>
+                        <ul class="tags">
+                            <li>Unit testing</li><li>Integration testing</li><li>Load testing</li>
+                            <li>Git</li><li>Jenkins</li><li>GitLab CI/CD</li>
+                            <li>Argo CD</li><li>GitHub Actions</li><li>OAuth 2.0</li><li>JWT</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="page" data-page aria-labelledby="experience-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">Work history</p>
+                    <h1 id="experience-title" tabindex="-1">Professional Experience</h1>
+                </header>
+
+                <div class="timeline">
+                    <article class="timeline-entry">
+                        <p class="date">Sep 2026 – Present</p>
+                        <div>
+                            <h2>L&amp;T Technology Services</h2>
+                            <p class="role">Golang Backend Developer · Client Vantiva</p>
+                            <ul class="detail-list">
+                                <li>Develop Go services and Linux edge-agent components for Vantiva’s VIA platform.</li>
+                                <li>Collect host metrics directly and refine gRPC transport and Kafka handling for metrics and batched logs.</li>
+                                <li>Make GPU telemetry scraping configurable and add monitoring for node health, capacity, and model-loading delays.</li>
+                                <li>Write Go unit tests, validate telemetry output, and review changes through Git pull requests.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <p class="date">Sep 2023 – Aug 2026</p>
+                        <div>
+                            <h2>Samsung Electronics</h2>
+                            <p class="role">Software Engineer · Backend &amp; Cloud</p>
+                            <ul class="detail-list">
+                                <li>Developed and operated Go microservices on AWS EKS for account and data-sync features.</li>
+                                <li>Built Kafka sync pipelines with asynchronous workers to handle traffic spikes.</li>
+                                <li>Tuned PostgreSQL queries and indexes with the data team and added Redis caching through AWS ElastiCache.</li>
+                                <li>Contributed to deployment automation and supported production incidents using CloudWatch and OpenTelemetry.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <p class="date">Jan 2021 – Aug 2022</p>
+                        <div>
+                            <h2>Digit Healthcare</h2>
+                            <p class="role">Software Engineer</p>
+                            <ul class="detail-list">
+                                <li>Built Go and Spring Boot microservices for patient and transaction workflows and integrated a responsive React interface.</li>
+                                <li>Improved claims API performance by optimizing database access and moving background work to Kafka.</li>
+                                <li>Maintained ETL pipelines, secured APIs with OAuth 2.0 and JWT, and supported production deployments.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-entry">
+                        <p class="date">Jan 2020 – Dec 2020</p>
+                        <div>
+                            <h2>Verzeo</h2>
+                            <p class="role">Software Engineer</p>
+                            <ul class="detail-list">
+                                <li>Developed Go and Spring Boot services for transactions and built Kafka workflows for real-time fraud scoring.</li>
+                                <li>Automated ingestion with Python and Bash and built data pipelines for transaction reporting.</li>
+                                <li>Worked with database administrators to rewrite inefficient queries and improve indexes.</li>
+                                <li>Contributed React and TypeScript features and mentored junior engineers on unit testing and QA practices.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="page" data-page aria-labelledby="impact-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">Measured results</p>
+                    <h1 id="impact-title" tabindex="-1">Key Achievements</h1>
+                    <p class="page-intro">
+                        Results from my work on system scale, performance, and software delivery.
+                    </p>
+                </header>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <p class="metric">1M+</p>
+                        <h2>Daily events supported</h2>
+                        <p>Developed Go services for account and data sync on a Samsung platform that handled more than one million events per day.</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="metric">35%</p>
+                        <h2>Lower API latency</h2>
+                        <p>Contributed to a latency reduction at Samsung by batching database reads that had been running once per record.</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="metric">30%</p>
+                        <h2>Higher backend throughput</h2>
+                        <p>Improved throughput at Samsung by tuning PostgreSQL queries and indexes and adding Redis caching.</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="metric">50%</p>
+                        <h2>Shorter deployment cycle</h2>
+                        <p>Helped cut deployment cycle time at Samsung by contributing to CI/CD automation with Jenkins, GitLab CI/CD, and Argo CD.</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="metric">40%</p>
+                        <h2>Healthcare workflow performance improvement</h2>
+                        <p>Contributed to this improvement at Digit Healthcare through query optimization and asynchronous processing, with a zero-downtime rollout.</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="metric">35%</p>
+                        <h2>Database performance gain in benchmarks</h2>
+                        <p>Worked with database administrators at Verzeo to rewrite stored procedures and redesign indexes for transaction scoring.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="capstone" class="page" data-page aria-labelledby="capstone-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">University of North Texas · 2023–2024</p>
+                    <h1 id="capstone-title" tabindex="-1">Capstone Projects</h1>
+                    <p class="page-intro">
+                        My master’s capstone brought together streaming data,
+                        predictive analytics, and dashboard reporting.
+                    </p>
+                </header>
+
+                <article class="reading-column">
+                    <div class="text-block">
+                        <h2>Real-Time Data Pipeline &amp; Predictive Analytics</h2>
+                        <p>
+                            I built an end-to-end pipeline to bring incoming data
+                            into an analytics environment, transform it, and
+                            prepare it for forecasting and reporting. The project
+                            covered the work from raw data ingestion to presenting
+                            the results to an audience.
+                        </p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>1. Ingest and transform the data</h3>
+                        <p>
+                            I used Python, Apache Kafka, Apache Spark, Databricks,
+                            and BigQuery to build the pipeline. I also applied
+                            natural language processing and statistical analysis
+                            in R to explore the resulting datasets.
+                        </p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>2. Train and evaluate forecasting models</h3>
+                        <p>
+                            I used TensorFlow and scikit-learn to train models,
+                            prepared input features, and tuned model settings.
+                            Cross-validation helped me evaluate how consistently
+                            the models performed across different portions of the data.
+                        </p>
+                    </div>
+
+                    <div class="text-block">
+                        <h3>3. Present the results</h3>
+                        <p>
+                            I presented the analysis and forecasting results
+                            through interactive dashboards for technical and
+                            business audiences.
+                        </p>
+                        <ul class="tags">
+                            <li>Python</li><li>Kafka</li><li>Spark</li><li>Databricks</li>
+                            <li>BigQuery</li><li>R</li><li>TensorFlow</li><li>scikit-learn</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="credentials" class="page" data-page aria-labelledby="credentials-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">Education &amp; professional development</p>
+                    <h1 id="credentials-title" tabindex="-1">Achievements &amp; Certificates</h1>
+                    <p class="page-intro">
+                        My graduate degree and the professional development
+                        programs listed in my résumé.
+                    </p>
+                </header>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <p class="card-label">Graduate degree</p>
+                        <h2>Master of Science in Data Science</h2>
+                        <p>University of North Texas · Denton, Texas · 2022–2024</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="card-label">Forage job simulation</p>
+                        <h2>Advanced Software Engineering</h2>
+                        <p>Walmart Global Tech</p>
+                    </article>
+
+                    <article class="card">
+                        <p class="card-label">Forage job simulation</p>
+                        <h2>Cybersecurity</h2>
+                        <p>Risk and APT Analysis</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page" data-page aria-labelledby="contact-title" hidden>
+            <div class="page-content">
+                <header class="page-heading">
+                    <p class="eyebrow">Get in touch</p>
+                    <h1 id="contact-title" tabindex="-1">Contact Info</h1>
+                    <p class="page-intro">
+                        Email me about software engineering roles or projects.
+                    </p>
+                </header>
+
+                <div class="card contact-card">
+                    <h2>Email</h2>
+                    <a href="mailto:ravichandrapothuri471@gmail.com">
+                        ravichandrapothuri471@gmail.com
+                    </a>
+
+                    <h2>Contact</h2>
+                    <a href="contactto:9453671129">
+                        9453671129
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <noscript>
+            <p class="noscript-note">Enable JavaScript in your browser to switch pages.</p>
+        </noscript>
+    </main>
+</body>
+</html>
